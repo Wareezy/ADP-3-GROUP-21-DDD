@@ -13,7 +13,7 @@ public class SupplierID {
 
     private SupplierID(Builder builder){
 
-        this.address = builder.address;;
+        this.address = builder.address;
         this.id = builder.id;
         this.email = builder.address;
         this.nameCompany = builder.nameCompany;
@@ -100,6 +100,7 @@ public class SupplierID {
             this.id = id;
             return this;
         }
+
         public Builder copy(SupplierID supplierid){
             this.id = supplierid.id;
             this.address = supplierid.address;
