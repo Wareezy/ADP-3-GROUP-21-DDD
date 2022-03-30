@@ -7,6 +7,8 @@ public class Manager {
     private String address;
     private int contact_number;
 
+    private Manager(){}
+
     //insert private constructor
     private Manager(Builder builder) {
         this.managerId = builder.managerId;
@@ -20,40 +22,20 @@ public class Manager {
         return managerId;
     }
 
-    public void setManagerId(String managerId) {
-        this.managerId = managerId;
-    }
-
     public String getFirstname() {
         return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
     }
 
     public String getLastname() {
         return lastname;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public int getContact_number() {
         return contact_number;
-    }
-
-    public void setContact_number(int contact_number) {
-        this.contact_number = contact_number;
     }
 
     @Override
