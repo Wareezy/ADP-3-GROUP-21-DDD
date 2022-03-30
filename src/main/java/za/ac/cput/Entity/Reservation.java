@@ -6,6 +6,9 @@ public class Reservation {
     public int numSeats;;
     public int tableID;
 
+    //private constructor
+    private Reservation(){}
+
     private Reservation(Builder builder){
         this.reservationNo = builder.reservationNo;
         this.timeOfReservation = builder.timeOfReservation;
@@ -17,33 +20,21 @@ public class Reservation {
         return reservationNo;
     }
 
-    public void setReservationNo(int reservationNo) {
-        this.reservationNo = reservationNo;
-    }
 
     public int getTimeOfReservation() {
         return timeOfReservation;
     }
 
-    public void setTimeOfReservation(int timeOfReservation) {
-        this.timeOfReservation = timeOfReservation;
-    }
 
     public int getNumSeats() {
         return numSeats;
     }
 
-    public void setNumSeats(int numSeats) {
-        this.numSeats = numSeats;
-    }
 
     public int getTableID() {
         return tableID;
     }
 
-    public void setTableID(int tableID) {
-        this.tableID = tableID;
-    }
 
     @Override
     public String toString() {

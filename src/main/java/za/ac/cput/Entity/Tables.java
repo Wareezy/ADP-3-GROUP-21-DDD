@@ -4,6 +4,8 @@ public class Tables {
     public boolean occupied;
     private String reservedTable;
     public int numSeats;
+//private constructor
+    private Tables(){}
 
     private Tables (Builder builder){
         this.tableID = builder.tableID;
@@ -15,33 +17,18 @@ public class Tables {
         return tableID;
     }
 
-    public void setTableID(int tableID) {
-        this.tableID = tableID;
-    }
-
     public boolean isOccupied() {
         return occupied;
-    }
-
-    public void setOccupied(boolean occupied) {
-        this.occupied = occupied;
     }
 
     public String getReservedTable() {
         return reservedTable;
     }
 
-    public void setReservedTable(String reservedTable) {
-        this.reservedTable = reservedTable;
-    }
-
     public int getNumSeats() {
         return numSeats;
     }
 
-    public void setNumSeats(int numSeats) {
-        this.numSeats = numSeats;
-    }
 
     @Override
     public String toString() {
