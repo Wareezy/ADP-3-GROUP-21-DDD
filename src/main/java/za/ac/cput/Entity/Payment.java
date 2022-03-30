@@ -41,11 +41,26 @@ public class Payment {
     }
 
     public static class Builder {
+
         private String customerID;
         private int orderAmount;
         private String paymentOption;
 
+        public void setPaymentOption(String paymentOption) {
+            this.paymentOption = paymentOption;
+        }
+
+        public void setCustomerID(String customerID) {
+            this.customerID = customerID;
+        }
+
+        public void setOrderAmount(int orderAmount) {
+            this.orderAmount = orderAmount;
+        }
+
     }
+
+
 
     public Payment copy (Payment payment){
         this.paymentOption = payment.paymentOption;
