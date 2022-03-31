@@ -1,87 +1,96 @@
 package za.ac.cput.Entity;
 
+//Nawaaz Amien
+//219099839
+//Group 21
+
 public class Manager {
     public String managerId;
-    public String firstname;
-    public String lastname;
+    public String firstName;
+    public String lastName;
     private String address;
-    private int contact_number;
+    private int employee_number;
 
     private Manager(){}
 
     //insert private constructor
     private Manager(Builder builder) {
         this.managerId = builder.managerId;
-        this.firstname = builder.firstname;
-        this.lastname =  builder.lastname;
+        this.firstName = builder.firstName;
+        this.lastName =  builder.lastName;
         this.address = builder.address;
-        this.contact_number = builder.contact_number;
+        this.employee_number = builder.employee_number;
     }
 
     public String getManagerId() {
         return managerId;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public int getContact_number() {
-        return contact_number;
+    public int getEmployee_number() {
+        return employee_number;
     }
 
     @Override
     public String toString() {
         return "Manager{" +
                 "managerId='" + managerId + '\'' +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
-                ", contact_number=" + contact_number +
+                ", employee_number=" + employee_number +
                 '}';
     }
 
     public static class Builder {
         public String managerId;
-        public String firstname;
-        public String lastname;
+        public String firstName;
+        public String lastName;
+        public int employee_number;
         private String address;
-        private int contact_number;
 
-        public void setManagerId(String managerId) {
+        public Builder setManagerId(String managerId) {
             this.managerId = managerId;
+            return this;
         }
 
-        public void setFirstname(String firstname) {
-            this.firstname = firstname;
+        public Builder setFirstName(String firstName) {
+            this.firstName = firstName;
+            return this;
         }
 
-        public void setLastname(String lastname) {
-            this.lastname = lastname;
+        public Builder setLastName(String lastName) {
+            this.lastName = lastName;
+            return this;
         }
 
-        public void setAddress(String address) {
+        public Builder setAddress(String address) {
             this.address = address;
+            return this;
         }
 
-        public void setContact_number(int contact_number) {
-            this.contact_number = contact_number;
+        public Builder setEmployee_number(int employee_number) {
+            this.employee_number = employee_number;
+            return this;
         }
 
         public Builder copy(Manager manager) {
             this.managerId = manager.managerId;
-            this.firstname = manager.firstname;
-            this.lastname = manager.lastname;
+            this.firstName = manager.firstName;
+            this.lastName = manager.lastName;
             this.address = manager.address;
-            this.contact_number = manager.contact_number;
+            this.employee_number = manager.employee_number;
             return this;
         }
 
