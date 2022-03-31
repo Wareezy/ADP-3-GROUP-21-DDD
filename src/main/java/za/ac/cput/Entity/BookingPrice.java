@@ -7,6 +7,7 @@ public class BookingPrice {
     public String waiterId;
     public int tableId;
 
+    private BookingPrice(){}
 
     //insert private constructor
     private BookingPrice(BookingPrice.Builder builder) {
@@ -21,33 +22,20 @@ public class BookingPrice {
         return BookingId;
     }
 
-    public void setBookingId(String bookingId) {
-        BookingId = bookingId;
-    }
-
     public String getCustomerId() {
         return CustomerId;
     }
 
-    public void setCustomerId(String customerId) {
-        CustomerId = customerId;
-    }
 
     public String getWaiterId() {
         return waiterId;
     }
 
-    public void setWaiterId(String waiterId) {
-        this.waiterId = waiterId;
-    }
 
     public int getTableId() {
         return tableId;
     }
 
-    public void setTableId(int tableId) {
-        this.tableId = tableId;
-    }
 
     public int getDeposit_price() {
         return deposit_price;
