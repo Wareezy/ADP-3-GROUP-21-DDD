@@ -1,5 +1,8 @@
 package za.ac.cput.Entity;
-
+/*Warren Jaftha(Leader) -219005303
+Customer.java
+27/03/2022
+ */
 public class Customer {
     private String customerID;
     private String customerName;

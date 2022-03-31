@@ -1,5 +1,8 @@
 package za.ac.cput.Entity;
-
+/*Warren Jaftha(Leader) -219005303
+Waiter.java
+27/03/2022
+ */
 public class Waiter {
     private String waiterID;
     private String waiterName;
