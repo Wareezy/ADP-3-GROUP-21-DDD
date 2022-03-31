@@ -1,7 +1,7 @@
 package za.ac.cput.Entity;
 
 public class Payment {
-    private String customerID;
+    private String paymentID;
     private double orderAmount;
     private String paymentOption;
 
@@ -9,39 +9,25 @@ public class Payment {
     }
 
     private Payment(Builder builder) {
-        this.customerID = builder.customerID;
+        this.paymentID = builder.paymentID;
         this.orderAmount = builder.orderAmount;
         this.paymentOption = builder.paymentOption;
     }
 
-    public String getCustomerID() {
-        return customerID;
+    public String getPaymentID() {
+        return paymentID;
     }
-
-    public void setCustomerID(String customerID) {
-        this.customerID = customerID;
-    }
-
     public double getOrderAmount() {
         return orderAmount;
     }
-
-    public void setOrderAmount(int orderAmount) {
-        this.orderAmount = orderAmount;
-    }
-
     public String getPaymentOption() {
         return paymentOption;
-    }
-
-    public void setPaymentOption(String paymentOption) {
-        this.paymentOption = paymentOption;
     }
 
     @Override
     public String toString() {
         return "Payment{" +
-                "customerID='" + customerID + '\'' +
+                "paymentID='" + paymentID + '\'' +
                 ", orderAmount=" + orderAmount + '\'' +
                 ", paymentOption='" + paymentOption +
                 '}';
@@ -49,29 +35,29 @@ public class Payment {
 
     public static class Builder {
 
-        private String customerID;
+        private String paymentID;
         private double orderAmount;
         private String paymentOption;
 
         public Builder setPaymentOption(String paymentOption) {
             this.paymentOption = paymentOption;
-            return null;
+            return this;
         }
 
-        public Builder setCustomerID(String customerID) {
-            this.customerID = customerID;
-            return null;
+        public Builder setPaymentID(String paymentID) {
+            this.paymentID = paymentID;
+            return this;
         }
 
         public Builder setOrderAmount(double orderAmount) {
             this.orderAmount = orderAmount;
-            return null;
+            return this;
         }
 
         public Builder copy(Payment payment) {
             this.paymentOption = payment.paymentOption;
             this.orderAmount = payment.orderAmount;
-            this.customerID = payment.customerID;
+            this.paymentID = payment.paymentID;
             return this;
         }
 

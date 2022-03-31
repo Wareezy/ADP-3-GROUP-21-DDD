@@ -7,7 +7,7 @@ import java.util.Date;
 public class Receipt {
 
     public String receiptID;
-    public Date date;
+    public String date;
     private double amount;
 
     private Receipt() {
@@ -24,7 +24,7 @@ public class Receipt {
         return receiptID;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -44,7 +44,7 @@ public class Receipt {
     public static class Builder {
 
         public String receiptID;
-        public Date date;
+        public String date;
         private double amount;
 
 
@@ -53,7 +53,7 @@ public class Receipt {
             return this;
         }
 
-        public Builder setDate(Date date) {
+        public Builder setDate(String date) {
             this.date = date;
             return this;
         }
