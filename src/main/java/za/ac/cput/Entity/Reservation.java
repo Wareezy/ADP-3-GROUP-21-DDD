@@ -3,7 +3,7 @@ package za.ac.cput.Entity;
 public class Reservation {
     private int reservationNo;
     private  int timeOfReservation;
-    public int numSeats;;
+    public int numSeats;
     public int tableID;
 
     //private constructor
